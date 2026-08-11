@@ -30,7 +30,7 @@ class CrachaPage extends StatelessWidget {
       body: Center(
         child: Container(
           color: Colors.green.shade50,
-          child: Card(
+          children: Card(
             elevation: 8,
             margin: const EdgeInsets.all(20),
             child: Padding(
