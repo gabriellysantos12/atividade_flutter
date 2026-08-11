@@ -22,7 +22,6 @@ class CrachaPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: const Text('Crachá do Aluno'),
         backgroundColor: Colors.green,
@@ -41,11 +40,8 @@ class CrachaPage extends StatelessWidget {
                 children: [
                   const CircleAvatar(
                     radius: 40,
-                    backgroundColor: Colors.green,
-                    child: Icon(
-                      Icons.person,
-                      size: 50,
-                      color: Colors.white,
+                    foregroundImage: NetworkImage(
+                      'https://images.unsplash.com/photo-1494790108377-be9c29b29330',
                     ),
                   ),
                   const SizedBox(height: 12),
@@ -57,13 +53,8 @@ class CrachaPage extends StatelessWidget {
                       color: Colors.green,
                     ),
                   ),
-                  const SizedBox(height: 4),
                   const Text(
                     'Desenvolvimento Mobile / PPDM',
-                    style: TextStyle(
-                      fontSize: 14,
-                      color: Colors.grey,
-                    ),
                   ),
                   const Divider(height: 24),
                   const Row(
@@ -83,6 +74,17 @@ class CrachaPage extends StatelessWidget {
                           'ana.silva@estudante.edu.br',
                         ),
                       ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  const Row(
+                    children: [
+                      Icon(
+                        Icons.check_circle,
+                        color: Colors.green,
+                      ),
+                      SizedBox(width: 10),
+                      Text('Status: Matriculado / Ativo'),
                     ],
                   ),
                 ],
