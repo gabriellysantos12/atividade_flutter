@@ -1,17 +1,23 @@
-# atividade_flutter
+# Atividade de Programação para Dispositivos Móveis
 
-A new Flutter project.
+## Unidade Curricular
 
-## Getting Started
+Programação para Dispositivos Móveis – PPDM
 
-This project is a starting point for a Flutter application.
+## Parte 1 – Respostas Conceituais
 
-A few resources to get you started if this is your first Flutter project:
+### 1. Qual é a diferença entre desenvolvimento nativo e cross-platform?
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+No desenvolvimento nativo, é necessário criar um código específico para cada sistema operacional. Por exemplo, Kotlin ou Java para Android e Swift para iOS.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+No desenvolvimento cross-platform, como o Flutter, um único código pode ser utilizado em diferentes plataformas, como Android, iOS, web e desktop. Isso facilita o desenvolvimento e a manutenção do aplicativo.
+
+### 2. Qual é a diferença entre StatelessWidget e StatefulWidget?
+
+O StatelessWidget é usado quando as informações da tela não precisam mudar durante a execução do aplicativo. Um exemplo seria uma tela que apresenta apenas textos e imagens.
+
+O StatefulWidget é usado quando alguma informação pode mudar durante o uso do aplicativo. Um exemplo seria um contador, um botão de curtida ou um formulário.
+
+### 3. O que acontece quando utilizamos setState()?
+
+Quando o método setState() é chamado, o Flutter entende que uma informação do estado foi alterada. Depois disso, ele executa novamente o método build() e atualiza na tela apenas as partes necessárias.
