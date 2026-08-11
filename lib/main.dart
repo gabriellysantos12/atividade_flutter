@@ -27,20 +27,15 @@ class CrachaPage extends StatelessWidget {
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
-
       body: Center(
         child: Container(
           color: Colors.green.shade50,
-
           child: Card(
             margin: const EdgeInsets.all(20),
-
             child: Padding(
               padding: const EdgeInsets.all(24),
-
               child: Padding(
                 padding: const EdgeInsets.all(8),
-
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
@@ -120,6 +115,15 @@ class CrachaPage extends StatelessWidget {
                           'Status: Matriculado / Ativo',
                         ),
                       ],
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    ElevatedButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Validar Carteirinha',
+                      ),
                     ),
                   ],
                 ),
