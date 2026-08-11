@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/cartao_estudante.dart';
+import 'desafio_lista.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,13 +24,13 @@ class CrachaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Crachá do Aluno'),
+        title: const Text(
+          'Carteirinhas dos Estudantes',
+        ),
         backgroundColor: Colors.green,
         foregroundColor: Colors.white,
       ),
-      body: const Center(
-        child: CartaoEstudante(),
-      ),
+      body: const DesafioLista(),
     );
   }
 }

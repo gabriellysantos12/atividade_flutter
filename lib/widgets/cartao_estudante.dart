@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
 class CartaoEstudante extends StatelessWidget {
-  const CartaoEstudante({super.key});
+  final String nome;
+  final String curso;
+  final String ra;
+  final String email;
+
+  const CartaoEstudante({
+    super.key,
+    required this.nome,
+    required this.curso,
+    required this.ra,
+    required this.email,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -25,9 +36,9 @@ class CartaoEstudante extends StatelessWidget {
 
                 const SizedBox(height: 12),
 
-                const Text(
-                  'Ana Silva Santos',
-                  style: TextStyle(
+                Text(
+                  nome,
+                  style: const TextStyle(
                     fontSize: 22,
                     fontWeight: FontWeight.bold,
                     color: Colors.green,
@@ -36,9 +47,9 @@ class CartaoEstudante extends StatelessWidget {
 
                 const SizedBox(height: 4),
 
-                const Text(
-                  'Desenvolvimento Mobile / PPDM',
-                  style: TextStyle(
+                Text(
+                  curso,
+                  style: const TextStyle(
                     fontSize: 14,
                     color: Colors.grey,
                   ),
@@ -49,30 +60,28 @@ class CartaoEstudante extends StatelessWidget {
                   thickness: 1,
                 ),
 
-                const Row(
+                Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.badge,
                       color: Colors.green,
                     ),
-                    SizedBox(width: 10),
-                    Text('RA: 2026109923'),
+                    const SizedBox(width: 10),
+                    Text('RA: $ra'),
                   ],
                 ),
 
                 const SizedBox(height: 8),
 
-                const Row(
+                Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.email,
                       color: Colors.green,
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Expanded(
-                      child: Text(
-                        'ana.silva@estudante.edu.br',
-                      ),
+                      child: Text(email),
                     ),
                   ],
                 ),
