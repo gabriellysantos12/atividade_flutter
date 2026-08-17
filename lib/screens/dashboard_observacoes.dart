@@ -7,6 +7,7 @@ class DashboardObservacoes extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFF4F7F6),
+
       appBar: AppBar(
         backgroundColor: const Color(0xFF0CB9AA),
         foregroundColor: Colors.white,
@@ -16,10 +17,14 @@ class DashboardObservacoes extends StatelessWidget {
           style: TextStyle(fontSize: 16),
         ),
       ),
+
       body: Padding(
         padding: const EdgeInsets.all(16),
+
         child: Column(
+          // EXERCÍCIO 02
           crossAxisAlignment: CrossAxisAlignment.center,
+
           children: [
             const Text(
               'Resumo das Observações',
@@ -31,6 +36,7 @@ class DashboardObservacoes extends StatelessWidget {
 
             const SizedBox(height: 12),
 
+            // CARDS DE ESTATÍSTICAS
             Row(
               children: [
                 Expanded(
@@ -117,7 +123,9 @@ class DashboardObservacoes extends StatelessWidget {
                         SizedBox(height: 4),
                         Text(
                           'Fotos',
-                          style: TextStyle(fontSize: 12),
+                          style: TextStyle(
+                            fontSize: 12,
+                          ),
                         ),
                       ],
                     ),
@@ -151,7 +159,9 @@ class DashboardObservacoes extends StatelessWidget {
                     Icons.star,
                     color: Colors.amber,
                   ),
+
                   SizedBox(width: 12),
+
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -161,7 +171,9 @@ class DashboardObservacoes extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
+
                       SizedBox(height: 3),
+
                       Text(
                         'Avistado no Parque Central',
                         style: TextStyle(
@@ -170,6 +182,53 @@ class DashboardObservacoes extends StatelessWidget {
                         ),
                       ),
                     ],
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 22),
+
+            // EXERCÍCIO 03
+            const Text(
+              'Últimos Registros',
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+              ),
+
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Row(
+                    children: [
+                      Icon(
+                        Icons.list_alt,
+                        color: Color(0xFF0CB9AA),
+                      ),
+
+                      SizedBox(width: 10),
+
+                      Text(
+                        'Ver registros recentes',
+                      ),
+                    ],
+                  ),
+
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Abrir'),
                   ),
                 ],
               ),
