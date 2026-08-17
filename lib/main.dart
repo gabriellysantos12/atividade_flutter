@@ -1,36 +1,43 @@
 import 'package:flutter/material.dart';
-import 'desafio_lista.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MeuApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MeuApp extends StatelessWidget {
+  const MeuApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const CrachaPage(),
+      home: const DashboardPage(),
     );
   }
 }
 
-class CrachaPage extends StatelessWidget {
-  const CrachaPage({super.key});
+class DashboardPage extends StatelessWidget {
+  const DashboardPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xFFF4F7F6),
+
       appBar: AppBar(
-        title: const Text(
-          'Carteirinhas dos Estudantes',
-        ),
-        backgroundColor: Colors.green,
+        backgroundColor: const Color(0xFF0CB9AA),
         foregroundColor: Colors.white,
+        centerTitle: true,
+        title: const Text(
+          'PPDM - Dashboard de Observações',
+        ),
       ),
-      body: const DesafioLista(),
+
+      body: const Center(
+        child: Text(
+          'Dashboard',
+        ),
+      ),
     );
   }
 }
